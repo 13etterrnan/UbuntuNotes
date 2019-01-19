@@ -1,0 +1,36 @@
+#常用Linux命令
+	序号	命令		对应英文		作用
+	01.	ls		list		查看当前文件夹下的内容
+	02.	pwd		print work directory	查看当前所在文件夹
+	03.	cd [目录名]	change directory	切换文件夹
+	04.	touch [文件名]	touch		如果文件不存在，新建文件
+	05.	mkdir [目录名]	make directory	创建目录
+	06.	rm [文件名]	remove		删除指定文件名（rm -r xxx 可删除目录）
+	07.	clear		clear		清屏
+
+	终端命令格式：command [-options] [parameter]
+	说明：
+		command：命令名，相应功能的英文你单词或单词的缩写
+		[-options]: 选项，可用来对命令进行控制，也可以省略
+		[parameter]：传给命令的参数，可以是零个，一个或者多个
+	[ ]表示可选
+
+#查阅命令帮助信息
+	1.--help：
+		command --help
+	2.man：
+		man command（man是manul缩写，是linux提供的一个手册，包含了绝大部分的命令，函数的详细使用说明）
+
+
+#命令扩展
+	touch：
+		如果文件不存在，可以新建一个空白文件
+		如果文件已存在，可以修改文件的末次修改日期
+	mkdir：
+		mkdir -p a/b/c/d/ （-p选项 可以递归创建目录，也就是创建a目录，然后a目录下有b目录...）
+		（ps：新建目录名不可与已存在的目录或文件同名）
+	rm：
+		删除文件或目录（ps：直接从磁盘中干掉，删除后不能恢复）
+		rm -r xxx	删除民不为xxx的目录
+		rm -f xxx	删除名为xxx的文件（加上-f选项后，无论有没有名为xxx的文件将不提示信息）
+		（ps：rm -rf * 千万不要在根目录下使用，除非你跟老板有仇；千万不要在根目录下使用，除非你跟老板有仇；千万不要在根目录下使用，除非你跟老板有仇）
