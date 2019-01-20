@@ -54,3 +54,28 @@
 	重定向：>和>>
 		>:表示输出，会覆盖文件原有的内容
 		>>:表示追加，会将内容追加到已有文件的末尾
+
+
+#文件内容有关的命令
+	cat：
+		cat 文件名		查看文件内容，创建文件，文件合并，追加文件内容等功能（文件内容较少时使用）
+	more：
+		more 文件名 	分屏显示文件内容（文件内容较多时使用）
+	grep：	grep 搜索文本 文件名		搜索文本文件内容
+
+
+#远程管理命令
+	shutdown：
+		shutdown -r	重新启动
+		tips：不指定选项和参数，默认1分钟之后 关闭电脑
+		        远程维护服务器时，最好不要关闭系统，而应该重新启动系统
+
+		shutdown -r now 	重新启动系统，now表示现在
+		shutdown now	立刻关机
+		shutdown 20.25 	系统在今天的20.25会关机
+		shutdown -c 	取消之前之前的关机计划
+
+	ifconfig:	
+		ifconfig	configure a network interface 查看/配置计算机当前的网卡配置信息
+	ping:
+		ping ip地址	ping		检测到目标ip地址的连接是否正常
