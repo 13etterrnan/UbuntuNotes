@@ -19,7 +19,13 @@
 		id	查看用户UID和GID信息
 		who	查看当前所有登录的用户列表
 		whoami	查看当前登录用户的用户名
-
+	
+	which	查询命令所在位置	（which ls）
+	
+	##切换用户
+		命令		作用			说明
+		su - 用户名	切换用户，并切换目录	- 可以切换到用户家目录，否则保持位置不变
+		exit		推出当前登录账户 
 
 #常用Linux命令
 	序号	命令		对应英文		作用
@@ -118,3 +124,37 @@
 		大小。
 		时间。
 		名称。
+
+
+#打包压缩
+	windows常用rar；
+	mac常用zip；
+	Linux常用tar.gz
+	
+	##tar与gzip命令结合可以实现文件 打包和压缩
+		tar只负责打包，但不压缩
+		gzip压缩tar打包后的文件，其扩展名一般用xxx.tar.gz
+
+	##tar是Linux中最常用的备份工具，可打包可恢复
+
+		//打包文件
+		tar -cvf 打包文件.tar 被打包的文件/路径。。。。（eg：tar -cvf py.tar 01.py 02.py 03.py）
+		//解包文件
+		tar -xvf 打包文件.tar	(eg:tar -xvf py.tar )
+
+		(ps:	c	生成档案文件，创建打包文件
+			x	解开档案文件
+			v	列出归档解档的详细过程，显示进度
+			f	指定归档文件名称，f后面一定要是.tar文件，所有必须放在最后，其他的顺序可以随意
+		)
+	
+	##gzip
+		tar命令中有一个选项-z可以调用gzip，从而可以方便的实现压缩和解压缩的功能
+		
+		命令格式如下：
+			//压缩文件
+			tar -zcvf 打包文件.tar.gz 被打包的文件/路径。。。。
+			//解压缩文件
+			tar -zxvf 解包文件.tar.gz	(eg:tar -xvf py.tar )
+			//解压缩到指定路径
+			tar -zcvf 打包文件.tar.gz -C 目标路径
