@@ -38,18 +38,18 @@ exit|推出当前登录账户
 06|rm [文件名]|remove|删除指定文件名（rm -r xxx 可删除目录）
 07|clear|clear|清屏
 
-> 终端命令格式：command [-options] [parameter]
-说明：
-	command：命令名，相应功能的英文你单词或单词的缩写
-	[-options]: 选项，可用来对命令进行控制，也可以省略
-	[parameter]：传给命令的参数，可以是零个，一个或者多个
-[ ]表示可选
+> 终端命令格式：command [-options] [parameter]<br/>
+* 说明：<br/>
+	* command：命令名，相应功能的英文你单词或单词的缩写<br/>
+	* [-options]: 选项，可用来对命令进行控制，也可以省略<br/>
+	* [parameter]：传给命令的参数，可以是零个，一个或者多个<br/>
+    * [ ]表示可选
 
 # 查阅命令帮助信息
-    --help：
-        command --help
-    man：
-	    man command（man是manul缩写，是linux提供的一个手册，包含了绝大部分的命令，函数的详细使用说明）
+* --help：<br/>
+    * command --help
+* man：<br/>
+	* man command（man是manul缩写，是linux提供的一个手册，包含了绝大部分的命令，函数的详细使用说明）
 
 
 # 命令扩展
@@ -142,15 +142,15 @@ ping ip地址|ping|检测到目标ip地址的连接是否正常
 	mac常用zip；<br/>
 	Linux常用tar.gz
 	
-## tar与gzip命令结合可以实现文件 打包和压缩
-* tar只负责打包，但不压缩
-* gzip压缩tar打包后的文件，其扩展名一般用xxx.tar.gz
+* tar与gzip命令结合可以实现文件 打包和压缩
+    * tar只负责打包，但不压缩
+    * gzip压缩tar打包后的文件，其扩展名一般用xxx.tar.gz
 
-## tar是Linux中最常用的备份工具，可打包可恢复
+* tar是Linux中最常用的备份工具，可打包可恢复
 
-* //打包文件<br/>
+    * //打包文件<br/>
 	tar -cvf 打包文件.tar 被打包的文件/路径。。。。（eg：tar -cvf py.tar 01.py 02.py 03.py）
-* //解包文件<br/>
+    * //解包文件<br/>
 	tar -xvf 打包文件.tar	(eg:tar -xvf py.tar )
 
     > (ps:	<br/>
@@ -160,13 +160,13 @@ ping ip地址|ping|检测到目标ip地址的连接是否正常
 			f	指定归档文件名称，f后面一定要是.tar文件，所有必须放在最后，其他的顺序可以随意
 		)
 	
-## gzip
-> tar命令中有一个选项-z可以调用gzip，从而可以方便的实现压缩和解压缩的功能
+* gzip
+    > tar命令中有一个选项-z可以调用gzip，从而可以方便的实现压缩和解压缩的功能
 		
-* 命令格式如下：
-    * //压缩文件<br/>
+    * 命令格式如下：
+        * //压缩文件<br/>
 		tar -zcvf 打包文件.tar.gz 被打包的文件/路径。。。。
-	* //解压缩文件<br/>
+	    * //解压缩文件<br/>
 		tar -zxvf 解包文件.tar.gz	(eg:tar -xvf py.tar )
-	* //解压缩到指定路径<br/>
+	    * //解压缩到指定路径<br/>
 		tar -zcvf 打包文件.tar.gz -C 目标路径
